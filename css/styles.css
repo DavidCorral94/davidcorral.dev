@@ -1,0 +1,92 @@
+#hero {
+    background-color: #000000;
+}
+
+#hero-bg {
+    padding: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero-content {
+    color: white;
+    text-align: center;
+}
+
+#hero-pic {
+    max-height: 300px;
+}
+
+.card {
+    text-align: center
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 0;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    object-fit: contain;
+}
+
+#education .col-lg-4,
+#profesional .col-lg-4,
+#social-networks .col-lg-3 {
+    padding: 10px;
+}
+
+.card {
+    padding: 5px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+#likes p {
+    text-align: center;
+}
+
+#social-networks a {
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.section {
+    margin: 45px 0px 45px 0px;
+}
+
+.twitter-link {
+    color: #00a2f5;
+}
+
+.linkedin-link {
+    color: #0077b7;
+}
+
+.github-link {
+    color: #1b1f23;
+}
+
+.stackoverflow-link {
+    color: #f48024;
+}
+
+.locale {
+    max-width: 25px;
+}

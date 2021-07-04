@@ -1,0 +1,107 @@
+const year = new Date().getFullYear();
+const age = year - 1994;
+const messages = {
+    en: {
+        message: {
+            whoami: 'Who am I?',
+            intro: 'Hello! My name is David Corral Plaza, I\'m ' + age + '  years old, and I\'m from Cádiz. Nowadays, I\'m working as a Software Engineer at 47 Degrees. Just before landing at 47, I was a researcher at the University of Cádiz thanks to a grant that funded the development of my Ph.D. thesis for almost 4 years.',
+            likes: 'I like a bunch of things, let me show you some of them:',
+            animals: 'Animals',
+            beer: 'Beer',
+            bbq: 'BBQ\'s',
+            dinosaurs: 'Dinosaurs',
+            football: 'Football',
+            motorbikes: 'Motorbikes',
+            videogames: 'Videogames',
+            travel: 'Travel',
+            education: 'Educational Background',
+            education_text: 'I like to think that you never stop learning, but regarding academic certificates, in 2016 I finished my Bachelor\'s Degree in Computer Engineering at the University of Cadiz (UCA), then, in 2017, I completed my Master\'s Degree Software Engineering and Technology at the University of Seville (US), with the best academic record. Finally, I devoted a few years to complete my Ph.D. Degree in Computer Engineering at the UCA, with the ',
+            education_text_2: ' distinction.',
+            phd: 'Ph.D. Degree',
+            computer_eng: 'Computer Engineering',
+            phd_dates: 'November 2017 - March 2021',
+            uca: 'University of Cadiz',
+            master: 'Master\'s Degree',
+            software_eng: 'Software Engineering and Technology',
+            master_dates: 'October 2016 - July 2017',
+            us: 'University of Seville',
+            degree: 'Bachelor\'s Degree',
+            degree_dates: 'October 2012 - July 2016',
+            profesional: 'Profesional Experience',
+            profesional_text: 'Currently, I\'m a Software Engineer at 47 Degrees. I\'m working with Functional Programming basics and back-end engineering based on Scala. In the past, I was a predoctoral researcher at the UCA. I dedicated those years to work on my Ph.D. and to do some lecturing at the Bachelor\'s Degree in Computer Engineering of the UCA. Previously, in the last year of my Bachelor\'s Degree, I did an internship to work as a Full-Stack and Android developer at the UCA.',
+            software_engineer: 'Software Engineer',
+            fortyseven_dates: 'May 2021 - now',
+            postdoctoral: 'Pre & Postdoctoral Researcher',
+            uca_dates: 'November 2017 - May 2021',
+            fullstack: 'Full Stack and Android Developer',
+            fullstack_dates: 'December 2015 - July 2016',
+            social: 'Social Networks',
+            social_text: 'I mostly use Twitter for memes, football, and (occasionally) personal reflections. LinkedIn as a place to track colleagues and friends in a business way. GitHub for all my work stuff. Stack Overflow daily.',
+            contact: 'Contact me',
+            contact_text: 'If you want to get in touch with me, I would recommend you to send me an email to my personal account, which is: ',
+            year: year
+        }
+    },
+    es: {
+        message: {
+            whoami: 'Sobre mí',
+            intro: 'Hola! Mi nombre es David Corral Plaza, tengo 27 años y soy de Cádiz (España). Actualmente, trabajo como Ingeniero del Software en 47 Degrees. Antes de eso, fui investigador en la Universidad de Cádiz gracias a una beca que financió el desarollo de mi tesis doctoral durante casi 4 años.',
+            likes: 'Me gustan muchas cosas, déjame que te muestre algunas de ellas:',
+            animals: 'Animales',
+            beer: 'Cervezas',
+            bbq: 'BBQ\'s',
+            dinosaurs: 'Dinosaurios',
+            football: 'Fútbol',
+            motorbikes: 'Motos',
+            videogames: 'Videojuegos',
+            travel: 'Viajar',
+            education: 'Formación Académica',
+            education_text: 'Me gusta pensar que uno nunca para de aprender, pero sobre temas académicos, en 2016 terminé mi Grado en Ingeniería Informática en la Universidad de Cádiz (UCA), después, en 2017, completé mi Máster en Ingeniería y Tecnología del Software en la Universidad de Sevilla (US), con el Premio Extraordinario de Fin de Máster. Finalmente, dediqué unos años a completar mi Doctorado en Ingeniería Informátoca, en la UCA, con el distintivo ',
+            education_text_2: ' Sobresaliente.',
+            phd: 'Doctorado',
+            computer_eng: 'Ingeniería Informática',
+            phd_dates: 'Noviembre 2017 - Marzo 2021',
+            uca: 'Universidad de Cadiz',
+            master: 'Máster',
+            software_eng: 'Ingeniería y Tecnología del Software',
+            master_dates: 'Octubre 2016 - Julio 2017',
+            us: 'Universidad de Sevilla',
+            degree: 'Grado',
+            degree_dates: 'Octubre 2012 - Julio 2016',
+            profesional: 'Experiencia Profesional',
+            profesional_text: 'Actualmente soy Ingeniero del Software en 47 Degrees. Trabajo en temas de Programación Funcional e ingeniería de back-end en Scala. En el pasado, he sido investigador predoctoral en la UCA. Durante esos años, trabajé en mi tesis doctoral e impartí algunas asignaturas del Grado en Ingeniería Informática en la UCA. Antes de todo eso, en mi último año de Grado, realicé unas prácticas como desarrollador Full-Stack y Android en un departamento de la propia universidad.',
+            software_engineer: 'Ingeniero del Software',
+            fortyseven_dates: 'Mayo 2021 - actualmente',
+            postdoctoral: 'Investigador Pre & Postdoctoral',
+            uca_dates: 'Noviembre 2017 - Mayo 2021',
+            fullstack: 'Desarrollador Full Stack y Android',
+            fullstack_dates: 'Diciembre 2015 - Julio 2016',
+            social: 'Redes Sociales',
+            social_text: 'Uso principalmente Twitter para memes, hablar de fútbol, y (muy de vez en cuando) reflexiones personales. LinkedIn lo utilizo para seguir a colegas y amigos en temas empresariales. GitHub para todo lo relacionado con mi propio trabajo. Stack Overflow todos los días.',
+            contact: 'Contáctame',
+            contact_text: 'Si quieres ponerte en contacto conmigo, te invito a que me escribas un email a mi cuenta personal, que es: ',
+            year: year
+        }
+    }
+}
+
+const i18n = new VueI18n({
+    locale: 'en',
+    messages,
+})
+
+
+var app = new Vue({
+    i18n,
+    el: '#app'
+})
+
+$('.locale').click(function() {
+    if (i18n.locale == 'en') {
+        i18n.locale = 'es';
+        $('.locale').prop("src", 'img/en.png');
+    } else {
+        i18n.locale = 'en';
+        $('.locale').prop("src", 'img/es.png');
+    }
+})
