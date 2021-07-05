@@ -16,226 +16,237 @@
 </head>
 
 <body>
-    <div id="hero">
-        <div id="hero-bg">
-            <div class="container">
-                <div class="row" id="hero-text">
-                    <div class="col-lg-12 co-12" id="hero-content">
-                        <img src="img/me.jpg" class="img-fluid rounded-circle" id="hero-pic" alt="picture">
-                        <h1>David Corral Plaza</h1>
+    <div class="bg-white text-dark">
+        <div id="hero">
+            <div id="hero-bg">
+                <div class="container">
+                    <div class="row" id="hero-text">
+                        <div class="col-lg-12 co-12" id="hero-content">
+                            <img src="img/me.jpg" class="img-fluid rounded-circle" id="hero-pic" alt="picture">
+                            <h1>David Corral Plaza</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container" id="app">
-        <div id="whoami" class="section">
-            <div class="row">
-                <div class="col-lg-11">
-                    <h2 class="align-top">🧑🏻‍💻 {{ $t("message.whoami") }}</h2>
-                </div>
-                <div class="col-lg-1">
-                    <h2 class="align-right"><img src="img/es.png" class="img-fluid locale" alt="Language"></h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="fw-light text-justify">{{ $t("message.intro") }}</h5>
-                </div>
-            </div>
-            <div class="row" id="likes">
-                <h5 class="fw-light text-justify">{{ $t("message.likes") }}</h5>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <img src="img/animals.jpg" class="img-fluid border rounded-3" alt="Animals">
-                        <p><i>{{ $t("message.animals") }}</i></p>
+        <div class="container" id="app">
+            <div id="whoami" class="section">
+                <div class="row align-items-center">
+                    <div class="col-lg-10">
+                        <h2 class="align-top">🧑🏻‍💻 {{ $t("message.whoami") }}</h2>
                     </div>
-                    <div class="col-lg-3">
-                        <img src="img/beer.jpg" class="img-fluid border rounded-3" alt="Beer">
-                        <p><i>{{ $t("message.beer") }}</i></p>
+                    <div class="col-lg-1">
+                        <div class="form-check form-switch" v-on:click="switchTheme">
+                            <input class="form-check-input" type="checkbox" id="theme">
+                            <label class="form-check-label" for="theme">
+                                <span style="display: none" class="themeMode">☀️</span>
+                                <span class="themeMode">🌑</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <img src="img/bbq.jpg" class="img-fluid border rounded-3" alt="BBQ's">
-                        <p><i>{{ $t("message.bbq") }}</i></p>
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="img/dino.jpg" class="img-fluid border rounded-3" alt="Dinosaurs">
-                        <p><i>{{ $t("message.dinosaurs") }}</i></p>
+                    <div class="col-lg-1">
+                        <h2 class="align-right"><img src="img/es.png" class="img-fluid locale" alt="Language"></h2>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="fw-light text-justify">{{ $t("message.intro") }}</h5>
+                    </div>
+                </div>
+                <div class="row" id="likes">
+                    <h5 class="fw-light text-justify">{{ $t("message.likes") }}</h5>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="img/animals.jpg" class="img-fluid border rounded-3" alt="Animals">
+                            <p><i>{{ $t("message.animals") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/beer.jpg" class="img-fluid border rounded-3" alt="Beer">
+                            <p><i>{{ $t("message.beer") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/bbq.jpg" class="img-fluid border rounded-3" alt="BBQ's">
+                            <p><i>{{ $t("message.bbq") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/dino.jpg" class="img-fluid border rounded-3" alt="Dinosaurs">
+                            <p><i>{{ $t("message.dinosaurs") }}</i></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="img/football.jpg" class="img-fluid border rounded-3" alt="Football">
+                            <p><i>{{ $t("message.football") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/moto.jpg" class="img-fluid border rounded-3" alt="Motorbikes">
+                            <p><i>{{ $t("message.motorbikes") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/videogames.jpg" class="img-fluid border rounded-3" alt="Videogames">
+                            <p><i>{{ $t("message.videogames") }}</i></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="img/travel.jpg" class="img-fluid border rounded-3" alt="Travel">
+                            <p><i>{{ $t("message.travel") }}</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>🎓 {{ $t("message.education") }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="fw-light text-justify">{{ $t("message.education_text") }} <i>Cum Laude</i> {{ $t("message.education_text_2") }}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/uca.png" class="card-img-top" alt="UCA">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.phd") }}<br>{{ $t("message.computer_eng") }}</h5>
+                                <p class="card-text mt-4">{{ $t("message.phd_dates") }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{ $t("message.uca") }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/us.png" class="card-img-top" alt="US">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.master") }}<br>{{ $t("message.software_eng") }}</h5>
+                                <p class="card-text mt-4">{{ $t("message.master_dates") }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{ $t("message.us") }}</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/uca.png" class="card-img-top" alt="UCA">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.degree") }}<br>{{ $t("message.computer_eng") }}</h5>
+                                <p class="card-text mt-4">{{ $t("message.degree_dates") }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">{{ $t("message.uca") }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="profesional" class="section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>🖥️ {{ $t("message.profesional") }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="fw-light text-justify">{{ $t("message.profesional_text") }}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/47.png" class="card-img-top" alt="47 Degrees">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.software_engineer") }}<br>47 Degrees</h5>
+                                <p class="card-text mt-4">{{ $t("message.fortyseven_dates") }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/uca.png" class="card-img-top" alt="UCA">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.postdoctoral") }}<br>{{ $t("message.uca") }}</h5>
+                                <p class="card-text mt-4">{{ $t("message.uca_dates") }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card shadow bg-white">
+                            <img src="img/uca.png" class="card-img-top" alt="UCA">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $t("message.fullstack") }}<br>{{ $t("message.uca") }}</h5>
+                                <p class="card-text mt-4">{{ $t("message.fullstack_dates") }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="social-networks" class="section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>👀 {{ $t("message.social") }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="fw-light text-justify">{{ $t("message.social_text") }}</h5>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-3">
-                        <img src="img/football.jpg" class="img-fluid border rounded-3" alt="Football">
-                        <p><i>{{ $t("message.football") }}</i></p>
+                        <div class="card shadow bg-white">
+                            <img src="img/twitter.png" class="card-img-top" alt="Twitter">
+                            <div class="card-body">
+                                <h5 class="card-title"><a class="twitter-link" href="https://twitter.com/DavidCorral94" target="_blank">@DavidCorral94</a></h5>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-3">
-                        <img src="img/moto.jpg" class="img-fluid border rounded-3" alt="Motorbikes">
-                        <p><i>{{ $t("message.motorbikes") }}</i></p>
+                        <div class="card shadow bg-white">
+                            <img src="img/linkedin.png" class="card-img-top" alt="LinkedIn">
+                            <div class="card-body">
+                                <h5 class="card-title"><a class="linkedin-link" href="https://www.linkedin.com/in/davidcorralp/" target="_blank">David Corral Plaza</a></h5>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-3">
-                        <img src="img/videogames.jpg" class="img-fluid border rounded-3" alt="Videogames">
-                        <p><i>{{ $t("message.videogames") }}</i></p>
+                        <div class="card shadow bg-white">
+                            <img src="img/github.png" class="card-img-top" alt="GitHub">
+                            <div class="card-body">
+                                <h5 class="card-title"><a class="github-link" href="https://github.com/DavidCorral94" target="_blank">DavidCorral94</a></h5>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-3">
-                        <img src="img/travel.jpg" class="img-fluid border rounded-3" alt="Travel">
-                        <p><i>{{ $t("message.travel") }}</i></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="education" class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>🎓 {{ $t("message.education") }}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="fw-light text-justify">{{ $t("message.education_text") }} <i>Cum Laude</i> {{ $t("message.education_text_2") }}</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/uca.png" class="card-img-top" alt="UCA">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.phd") }}<br>{{ $t("message.computer_eng") }}</h5>
-                            <p class="card-text mt-4">{{ $t("message.phd_dates") }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">{{ $t("message.uca") }}</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/us.png" class="card-img-top" alt="US">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.master") }}<br>{{ $t("message.software_eng") }}</h5>
-                            <p class="card-text mt-4">{{ $t("message.master_dates") }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">{{ $t("message.us") }}</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/uca.png" class="card-img-top" alt="UCA">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.degree") }}<br>{{ $t("message.computer_eng") }}</h5>
-                            <p class="card-text mt-4">{{ $t("message.degree_dates") }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">{{ $t("message.uca") }}</small>
+                        <div class="card shadow bg-white">
+                            <img src="img/stackoverflow.png" class="card-img-top" alt="Stack Overflow">
+                            <div class="card-body">
+                                <h5 class="card-title"><a class="stackoverflow-link" href="https://stackoverflow.com/users/5582307/david-corral?tab=profile" target="_blank">David Corral</a></h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="profesional" class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>🖥️ {{ $t("message.profesional") }}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="fw-light text-justify">{{ $t("message.profesional_text") }}</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/47.png" class="card-img-top" alt="47 Degrees">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.software_engineer") }}<br>47 Degrees</h5>
-                            <p class="card-text mt-4">{{ $t("message.fortyseven_dates") }}</p>
-                        </div>
+            <div id="contact-me" class="section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>📧 {{ $t("message.contact") }}</h2>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/uca.png" class="card-img-top" alt="UCA">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.postdoctoral") }}<br>{{ $t("message.uca") }}</h5>
-                            <p class="card-text mt-4">{{ $t("message.uca_dates") }}</p>
-                        </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="fw-light text-justify">{{ $t("message.contact_text") }}<img id="email" src="img/email.png" class="img-fluid" alt="contact"></h5>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card shadow">
-                        <img src="img/uca.png" class="card-img-top" alt="UCA">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $t("message.fullstack") }}<br>{{ $t("message.uca") }}</h5>
-                            <p class="card-text mt-4">{{ $t("message.fullstack_dates") }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="social-networks" class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>👀 {{ $t("message.social") }}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="fw-light text-justify">{{ $t("message.social_text") }}</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="card shadow">
-                        <img src="img/twitter.png" class="card-img-top" alt="Twitter">
-                        <div class="card-body">
-                            <h5 class="card-title"><a class="twitter-link" href="https://twitter.com/DavidCorral94" target="_blank">@DavidCorral94</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card shadow">
-                        <img src="img/linkedin.png" class="card-img-top" alt="LinkedIn">
-                        <div class="card-body">
-                            <h5 class="card-title"><a class="linkedin-link" href="https://www.linkedin.com/in/davidcorralp/" target="_blank">David Corral Plaza</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card shadow">
-                        <img src="img/github.png" class="card-img-top" alt="GitHub">
-                        <div class="card-body">
-                            <h5 class="card-title"><a class="github-link" href="https://github.com/DavidCorral94" target="_blank">DavidCorral94</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card shadow">
-                        <img src="img/stackoverflow.png" class="card-img-top" alt="Stack Overflow">
-                        <div class="card-body">
-                            <h5 class="card-title"><a class="stackoverflow-link" href="https://stackoverflow.com/users/5582307/david-corral?tab=profile" target="_blank">David Corral</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="contact-me" class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>📧 {{ $t("message.contact") }}</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h5 class="fw-light text-justify">{{ $t("message.contact_text") }}<img id="email" src="img/email.png" class="img-fluid" alt="contact"></h5>
                 </div>
             </div>
         </div>
     </div>
     <footer class="footer mt-auto py-3 bg-primary">
         <div class="container">
-            <p class="text-white">© <script>
+            <p id="footer-text">© <script>
                 document.write(new Date().getFullYear())
                 </script> davidcorral.dev - David Corral Plaza - Powered by Bootstrap & Vue</p>
         </div>

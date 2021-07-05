@@ -93,7 +93,14 @@ const i18n = new VueI18n({
 
 var app = new Vue({
     i18n,
-    el: '#app'
+    el: '#app',
+    methods: {
+        switchTheme: function(event) {
+            $('.bg-dark, .bg-white').toggleClass('bg-dark bg-white');
+            $('.text-white, .text-dark').toggleClass('text-white text-dark');
+            $('.themeMode').toggle();
+        }
+    }
 })
 
 $('.locale').click(function() {

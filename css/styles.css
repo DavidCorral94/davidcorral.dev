@@ -90,3 +90,12 @@ body {
 .locale {
     max-width: 25px;
 }
+
+#footer-text {
+    color: white;
+}
+
+#contact-me {
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+}
