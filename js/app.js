@@ -99,6 +99,7 @@ var app = new Vue({
             $('.bg-dark, .bg-white').toggleClass('bg-dark bg-white');
             $('.text-white, .text-dark').toggleClass('text-white text-dark');
             $('.themeMode').toggle();
+            $('.email').toggle();
         }
     }
 })
