@@ -1,5 +1,6 @@
+const getAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10)
 const year = new Date().getFullYear();
-const age = year - 1994;
+const age = getAge('1994-06-05');
 const messages = {
     en: {
         message: {
