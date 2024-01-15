@@ -5,11 +5,11 @@ const messages = {
     en: {
         message: {
             whoami: 'Who am I?',
-            intro: 'Hello! My name is David Corral Plaza, I\'m ' + age + '  years old, and I\'m from Cádiz. Nowadays, I\'m working as a Software Engineer at 47 Degrees. Just before landing at 47, I was a researcher at the University of Cádiz thanks to a grant that funded the development of my Ph.D. thesis for almost 4 years.',
+            intro: 'Hello! My name is David Corral Plaza, I\'m ' + age + '  years old, and I\'m from Cádiz. Nowadays, I\'m working as a Senior Software Engineer at Xebia (formerly known as 47 Degrees). Just before landing at 47, I was a researcher at the University of Cádiz thanks to a grant that funded the development of my Ph.D. thesis for almost 4 years.',
             likes: 'I like a bunch of things, let me show you some of them:',
             animals: 'Animals',
-            beer: 'Beer',
-            bbq: 'BBQ\'s',
+            drone: 'Drone photography',
+            adventure: 'Adventures',
             dinosaurs: 'Dinosaurs',
             football: 'Football',
             motorbikes: 'Motorbikes',
@@ -29,8 +29,8 @@ const messages = {
             degree: 'Bachelor\'s Degree',
             degree_dates: 'October 2012 - July 2016',
             profesional: 'Profesional Experience',
-            profesional_text: 'Currently, I\'m a Software Engineer at 47 Degrees. I\'m working with Functional Programming basics and back-end engineering based on Scala. In the past, I was a predoctoral researcher at the UCA. I dedicated those years to work on my Ph.D. and to do some lecturing at the Bachelor\'s Degree in Computer Engineering of the UCA. Previously, in the last year of my Bachelor\'s Degree, I did an internship to work as a Full-Stack and Android developer at the UCA.',
-            software_engineer: 'Software Engineer',
+            profesional_text: 'Currently, I\'m a Senior Software Engineer at Xebia. I\'m working with Functional Programming basics and back-end engineering based on Scala, using the Typelevel ecosystem and a bunch of cutting-edge technologies such as AWS, Redis, Postgres, Kafka, etc. In the past, I was a predoctoral researcher at the UCA. I dedicated those years to work on my Ph.D. and to do some lecturing at the Bachelor\'s Degree in Computer Engineering of the UCA. Previously, in the last year of my Bachelor\'s Degree, I did an internship to work as a Full-Stack and Android developer at the UCA.',
+            software_engineer: 'Senior Software Engineer',
             fortyseven_dates: 'May 2021 - now',
             postdoctoral: 'Pre & Postdoctoral Researcher',
             uca_dates: 'November 2017 - May 2021',
@@ -46,11 +46,11 @@ const messages = {
     es: {
         message: {
             whoami: 'Sobre mí',
-            intro: 'Hola! Mi nombre es David Corral Plaza, tengo 27 años y soy de Cádiz (España). Actualmente, trabajo como Ingeniero del Software en 47 Degrees. Antes de eso, fui investigador en la Universidad de Cádiz gracias a una beca que financió el desarollo de mi tesis doctoral durante casi 4 años.',
+            intro: 'Hola! Mi nombre es David Corral Plaza, tengo ' + age + ' años y soy de Cádiz (España). Actualmente, trabajo como Ingeniero del Software Senior en Xebia (antes conocido como 47 Degrees). Antes de eso, fui investigador en la Universidad de Cádiz gracias a una beca que financió el desarollo de mi tesis doctoral durante casi 4 años.',
             likes: 'Me gustan muchas cosas, déjame que te muestre algunas de ellas:',
             animals: 'Animales',
-            beer: 'Cervezas',
-            bbq: 'BBQ\'s',
+            drone: 'Fotografía con Drones',
+            adventure: 'Aventuras',
             dinosaurs: 'Dinosaurios',
             football: 'Fútbol',
             motorbikes: 'Motos',
@@ -70,8 +70,8 @@ const messages = {
             degree: 'Grado',
             degree_dates: 'Octubre 2012 - Julio 2016',
             profesional: 'Experiencia Profesional',
-            profesional_text: 'Actualmente soy Ingeniero del Software en 47 Degrees. Trabajo en temas de Programación Funcional e ingeniería de back-end en Scala. En el pasado, he sido investigador predoctoral en la UCA. Durante esos años, trabajé en mi tesis doctoral e impartí algunas asignaturas del Grado en Ingeniería Informática en la UCA. Antes de todo eso, en mi último año de Grado, realicé unas prácticas como desarrollador Full-Stack y Android en un departamento de la propia universidad.',
-            software_engineer: 'Ingeniero del Software',
+            profesional_text: 'Actualmente soy Ingeniero del Software Senior en Xebia. Trabajo en temas de Programación Funcional e ingeniería de back-end en Scala, especializado en el ecosistema de Typelevel utilizando tecnologías de última generación como AWS, Redis, Postgres, Kafka. En el pasado, he sido investigador predoctoral en la UCA. Durante esos años, trabajé en mi tesis doctoral e impartí algunas asignaturas del Grado en Ingeniería Informática en la UCA. Antes de todo eso, en mi último año de Grado, realicé unas prácticas como desarrollador Full-Stack y Android en un departamento de la propia universidad.',
+            software_engineer: 'Ingeniero del Software Senior',
             fortyseven_dates: 'Mayo 2021 - actualmente',
             postdoctoral: 'Investigador Pre & Postdoctoral',
             uca_dates: 'Noviembre 2017 - Mayo 2021',
@@ -96,7 +96,7 @@ var app = new Vue({
     i18n,
     el: '#app',
     methods: {
-        switchTheme: function(event) {
+        switchTheme: function (event) {
             $('.bg-dark, .bg-white').toggleClass('bg-dark bg-white');
             $('.text-white, .text-dark').toggleClass('text-white text-dark');
             $('.themeMode').toggle();
@@ -105,7 +105,7 @@ var app = new Vue({
     }
 })
 
-$('.locale').click(function() {
+$('.locale').click(function () {
     if (i18n.locale == 'en') {
         i18n.locale = 'es';
         $('.locale').prop("src", 'img/en.png');
